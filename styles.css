@@ -3,11 +3,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('images/your-background-image.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 header {
-    background: #333;
+    background: rgba(51, 51, 51, 0.8); /* Adds transparency */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -17,7 +20,7 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background: #444;
+    background: rgba(68, 68, 68, 0.8); /* Adds transparency */
     margin: 0;
 }
 
@@ -36,15 +39,24 @@ section {
     padding: 1rem;
     margin: 1rem auto;
     max-width: 800px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Adds a slight transparency to the section background */
 }
 
 footer {
     text-align: center;
-    padding: 0.5rem 0;
-    background: #333;
+    padding: 0.5rem 0; /* Decreased padding */
+    background: rgba(51, 51, 51, 0.8); /* Adds transparency */
     color: #fff;
-    position: fixed;
+    position: relative; /* Removed fixed positioning */
     width: 100%;
-    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+    }
+
+    section {
+        margin: 0.5rem;
+    }
 }
